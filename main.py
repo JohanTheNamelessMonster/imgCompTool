@@ -59,8 +59,9 @@ def upload_file():
                     model_layer.trainable = False
 
                 similarity = get_similarity_score(filepath,'IMG_2284.jpg')
+                print(similarity)
 
-                if similarity >= 0.9:
+                if similarity >= 0.7:
                     messagebox.showinfo("Success","These images are acceptably similar")
                 else:
                     messagebox.showwarning("Warning","These images are seemingly different")
